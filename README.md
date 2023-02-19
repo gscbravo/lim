@@ -34,7 +34,7 @@ with [Nginx](https://nginx.org/).
 
 ## TODO
 
-- [ ] Make sure this works with multiple threads and processes as workers
+- [ ] Make sure this works with multiple processes as workers
 - [ ] Replies
 - [ ] Config file to configure settings
 - [ ] Website admin area to configure settings
