@@ -26,6 +26,8 @@ MAX_COMMENT_LENGTH = 2000
 DEFAULT_NAME = 'Guest'
 # site name
 SITE_NAME = 'Limited Forums'
+# site description
+SITE_DESCRIPTION = 'Limited Forums open comments section'
 
 app = Flask(__name__)
 
@@ -51,7 +53,7 @@ def load_board():
     board_comments = []
     for comment in res:
         board_comments.insert(0, [comment[0], comment[1], comment[2], comment[3].split('\n'), comment[4]])
-    return render_template('comments.html', comments=board_comments, default_name=DEFAULT_NAME, site_name=SITE_NAME)
+    return render_template('comments.html', comments=board_comments, default_name=DEFAULT_NAME, site_name=SITE_NAME, site_description=SITE_DESCRIPTION)
 
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():

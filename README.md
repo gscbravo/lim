@@ -17,8 +17,9 @@ The defaults for the forum are found in variables at the top of `app.py`.
 ### Defaults
 - Maximum number of comments per board: `1000`
 - Maximum comment length: `2000`
-- Default comment name: `Guest`
-- Default site name: `Limited Forums`
+- Post name: `Guest`
+- Site name: `Limited Forums`
+- Site description: `Limited Forums open comments section`
 
 ## Usage
 
