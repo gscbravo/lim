@@ -4,16 +4,22 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="{{ site_description }}">
+	<meta name="description" content="{{ board_name }} - {{ site_name }}, {{ site_description }}">
 	<link rel="stylesheet" href="/static/style.css">
-	<title>{{ site_name }}</title>
+	<title>{{ board_name }} - {{ site_name }}</title>
 </head>
 <body>
 	<div class="wrapper">
-		<h1>{{ site_name }}</h1>
+		<h1><a href="/b/{{ board_name }}/">{{ board_name }}</a> - {{ site_name }}</h1>
+		<!-- forum options -->
+		<h2><a href="/boards" id="created-boards">Created Boards</a></h2>
+		<form action="/go" method="post">
+			<input type="text" name="board" id="go-board" placeholder="board" required>
+			<input type="submit" id="go-submit" value="Go">
+		</form>
 		<!-- comment form -->
 		<h2>Submit Comment</h2>
-		<form action="/submit" method="post" id="comment-form">
+		<form action="submit" method="post" id="comment-form">
 			<label for="form-name">Name:</label>
 			<input type="text" name="name" id="form-name" placeholder="{{ default_name }}"><br>
 			<label for="form-subject">Subject:</label>
